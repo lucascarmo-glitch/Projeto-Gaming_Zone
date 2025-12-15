@@ -1,0 +1,46 @@
+<nav class="navbar">
+    <div class="nav-container">
+        <img routerLink="init" src="./assets/img/logo.png">
+        <div class="nav-center">
+            <ul class="nav-links" id="navLinks">
+                <li><a routerLink="#">Home</a></li>
+                <li><a routerLink="#">Jogos</a></li>
+                <li><a routerLink="#">Contato</a></li>
+
+                <li class="mobile-auth-buttons">
+                    <a routerLink="#" class="auth-btn login-btn">Login</a>
+
+                    <!-- search-button (mobile) -->
+                    <div class="control" (click)="openSearch()">
+                        <div class="btn-material"></div>
+                        <i class="material-icons icon-material-search">search</i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="auth-buttons">
+            <a routerLink="login" class="auth-btn login-btn">Login</a>
+
+            <!-- search-button (desktop) -->
+            <div class="control" (click)="openSearch()">
+                <div class="btn-material"></div>
+                <span class="icon-material-search" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+</nav>
+
+<!-- search-overlay -->
+<i class="icon-close material-icons" (click)="closeSearch()">close</i>
+
+<div class="search-input">
+    <input class="input-search" placeholder="Pesquise nosso catálogo" type="text" />
+</div>

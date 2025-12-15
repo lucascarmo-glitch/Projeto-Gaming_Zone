@@ -1,0 +1,222 @@
+/* Floating Navbar */
+.navbar {
+  position: fixed;
+  top: 2vh;
+  left: 50%;
+  background: rgba(26, 26, 26, 0.9);
+  backdrop-filter: blur(10px);
+  opacity: 95%;
+  border: 1px solid #333;
+  border-radius: 3.125rem;
+  padding: 1.1vh 1.56vw;
+  z-index: 800;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
+
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+img {
+  height: 3.5rem;
+  width: 3.5rem;
+  transition: transform all 0.3 ease-in-out;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.875rem;
+  margin-left: -1.5rem;
+  margin-top: 1rem;
+}
+
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0.125rem;
+  bottom: -0.3125rem;
+  left: 50%;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Auth buttons */
+.auth-buttons {
+  display: flex;
+  gap: 0.9375rem;
+  align-items: center;
+}
+
+.auth-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 1.5625rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.mobile-auth-buttons {
+  display: none;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.login-btn {
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+
+.login-btn:hover {
+  color: #ffffff;
+  border-color: #555;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ================= SEARCH BUTTON ================= */
+
+.control {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-material {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: transparent;
+
+}
+
+.icon-material-search {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.icon-material-search svg {
+
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+
+  stroke: #e0e0e0;
+  stroke-width: 2;
+  fill: none;
+  
+  transition: 
+  transform 0.3 ease-in-out, 
+  stroke 0.3s ease-in-out;
+}
+
+.control:hover .icon-material-search svg {
+
+  stroke: #ffffff;
+  transform: translateY(-0.125rem) scale(1.05);
+
+}
+
+/* ================= SEARCH OVERLAY CONTENT ================= */
+
+.search-input {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  z-index: 1100;
+  /* ACIMA DO OVERLAY GLOBAL */
+
+  transition: opacity 0.3s ease;
+}
+
+.search-input input {
+  width: min(90vw, 40rem);
+
+  background: transparent;
+  border: none;
+  border-bottom: 0.125rem solid #ffffff;
+
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #ffffff;
+
+  padding: 0.5rem 0;
+  outline: none;
+
+  appearance: none;
+}
+
+.icon-close {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+
+  font-size: 3.5rem;
+  color: #fff;
+
+  opacity: 0;
+  cursor: default;
+
+  z-index: 1200;
+}
