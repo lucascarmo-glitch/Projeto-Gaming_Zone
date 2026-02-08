@@ -1,4 +1,6 @@
-/* Banner Section */
+/* ==============================
+   Banner Section
+   ============================== */
 .banner-section {
   height: 75vh;
   margin: 0;
@@ -11,23 +13,22 @@
   content: "";
   position: absolute;
   inset: 0;
-
-  background-image: repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.015),
-      rgba(255, 255, 255, 0.015) 1px,
-      transparent 1px,
-      transparent 3px);
-
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.015),
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
   opacity: 0.15;
   pointer-events: none;
   z-index: 1;
 }
 
-
 .banner-section .carousel-container {
-  height: 100%;
-  width: 100%;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .banner-section .carousel-items {
@@ -36,7 +37,6 @@
   height: 100%;
 }
 
-/* Cada slide */
 .banner-section .carousel-item {
   position: absolute;
   top: 0;
@@ -44,14 +44,14 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .banner-section .carousel-item.active {
   pointer-events: auto;
 }
 
-/* Imagem principal do banner */
-.banner-section .carousel-item>img {
+.banner-section .carousel-item > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -62,8 +62,8 @@
 /* Caption */
 .banner-section .carousel-caption-left {
   position: absolute;
-  left: 3%;
   top: 50%;
+  left: 3%;
   transform: translateY(-50%);
   z-index: 3;
 }
@@ -75,7 +75,7 @@
   object-fit: contain;
 }
 
-/* Setas */
+/* Carousel Controls */
 .banner-section .carousel-control-prev,
 .banner-section .carousel-control-next {
   position: absolute;
@@ -90,6 +90,12 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.banner-section .carousel-control-prev:hover,
+.banner-section .carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .banner-section .carousel-control-prev-icon,
@@ -101,47 +107,41 @@
   background-repeat: no-repeat;
 }
 
-.banner-section .carousel-control-prev {
-  left: 1rem;
-}
+.banner-section .carousel-control-prev { left: 1rem; }
+.banner-section .carousel-control-next { right: 1rem; }
 
-.banner-section .carousel-control-next {
-  right: 1rem;
-}
 
-/* =================Game Section============ */
+/* ==============================
+   Game Section
+   ============================== */
 .game-section {
-  padding: 5rem 2rem 5rem;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 .line-title {
-  position: relative;
-  margin-bottom: 1rem;
   font-size: 2rem;
+  font-weight: 100;
   text-align: center;
   color: #e0e0e0;
-  font-weight: 100;
+  margin-bottom: 1rem;
 }
 
 .line-description {
-
-  position: relative;
   font-size: 0.9rem;
   text-align: center;
   color: #b0b0b0;
   margin-bottom: 3rem;
 }
 
-/* Carrossel de games */
-
+/* Game Carousel */
 .carousel-container {
   display: flex;
-  justify-content: flex-start;
   gap: 1.25rem;
-  overflow: hidden;
+  overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 0.5rem;
 }
@@ -149,15 +149,11 @@
 .carousel-items {
   display: flex;
   gap: 1.25rem;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
-.carousel-items::-webkit-scrollbar {
-  display: none;
-}
+.carousel-items::-webkit-scrollbar { display: none; }
 
 .item {
   width: 15rem;
@@ -177,11 +173,11 @@
   box-shadow: 0.75rem 2.5rem 2.5rem rgba(0, 0, 0, 0.25);
 }
 
-.item:after {
+.item::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
 }
 
 .item-desc {
@@ -191,14 +187,11 @@
   transition: all 0.4s ease-in-out;
 }
 
-.item.active .item-desc {
-  transform: none;
-}
+.item.active .item-desc { transform: none; }
 
 .item-desc h3 {
-
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #ffffff;
 }
 
@@ -206,8 +199,7 @@
   opacity: 0;
   transform: translateY(2rem);
   transition: all 0.4s ease-in-out 0.2s;
-
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   color: #e0e0e0;
 }
@@ -217,188 +209,156 @@
   transform: translateY(0);
 }
 
-/* Responsividade */
-@media(max-width: 62rem) {
-  .item {
-    width: 16.25rem;
-    height: 22.5rem;
-  }
-
-  .item.active {
-    width: 25rem;
-  }
+/* Game Carousel Responsivo */
+@media (max-width: 62rem) {
+  .item { width: 16.25rem; height: 22.5rem; }
+  .item.active { width: 25rem; }
 }
 
-@media(max-width: 48rem) {
-  .item {
-    width: 12.5rem;
-    height: 17.5rem;
-  }
-
-  .item.active {
-    width: 16.875rem;
-  }
+@media (max-width: 48rem) {
+  .item { width: 12.5rem; height: 17.5rem; }
+  .item.active { width: 16.875rem; }
 }
 
-/* ========================Cards Section======================== */
 
+/* ==============================
+   Cards Section
+   ============================== */
 .cards-section {
-
   display: flex;
   flex-direction: column;
-
   width: 100%;
-  padding: 5rem 0 5rem;
+  padding: 5rem 0;
 }
 
 .cards-section-title {
-
+  
   justify-content: center;
   align-items: center;
-  padding: 3rem 0 3rem;
-
+  padding: 3rem 0;
 }
 
 h2.title {
-
   position: relative;
-  margin-bottom: 1rem;
   font-size: 2rem;
+  font-weight: 100;
   text-align: center;
   color: #e0e0e0;
-  font-weight: 100;
+  margin-bottom: 1rem;
 }
 
 p.description {
-
   position: relative;
-  margin-bottom: 3rem;
   font-size: 0.9rem;
   text-align: center;
   color: #b0b0b0;
+  margin-bottom: 3rem;
 }
 
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  grid-gap: 1rem;
-  margin: 0 auto;
+  gap: 1rem;
   width: 90%;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
-
 }
 
 .card {
-
-  height: 200px;
   position: relative;
-  overflow: hidden;
+  height: 200px;
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  transition: 0.3s ease-in-out cubic-bezier(0.2, 0.8, 0.2, 1);
   align-items: center;
   cursor: pointer;
-
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card::before {
-
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(26, 26, 26, 0.9);
+  background: rgba(26,26,26,0.9);
   backdrop-filter: blur(10px);
   z-index: 1;
   opacity: 0.5;
-
 }
 
 .card img {
   position: absolute;
   top: 0;
-  height: 110%;
   width: 100%;
+  height: 110%;
+  object-fit: cover;
   z-index: 0;
-
-  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.8s cubic-bezier(0.2,0.8,0.2,1);
 }
 
 .card:hover {
   transform: scale(1.035);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
 
-.card:hover img {
-  transform: translateY(-10px);
-}
+.card:hover img { transform: translateY(-10px); }
 
 .card h3 {
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  color: #e0e0e0;
+  font-size: 1.5rem;
   font-weight: 500;
-  font-size: 24px;
+  color: #e0e0e0;
   text-align: center;
   margin: 0;
   z-index: 2;
-
 }
 
-/* =================Social Section============ */
 
+/* ==============================
+   Social Section
+   ============================== */
 .socials {
-
-  padding: 5rem 0 5rem;
+  padding: 5rem 0;
   display: flex;
   justify-content: center;
-
 }
 
 .social-container {
-
-  width: 100%;
-
   display: grid;
   justify-content: center;
-
+  width: 100%;
 }
 
 .container-title h3 {
-
-  position: relative;
-  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 200;
   text-align: center;
   color: #e0e0e0;
-  font-weight: 200;
-  font-size: 2rem;
+  margin-bottom: 3rem;
   padding-top: 5vh;
 }
 
 .social-icons {
-
-  padding-bottom: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
   gap: clamp(1rem, 3vw, 2rem);
-
+  padding-bottom: 5rem;
 }
 
 .social-icons svg {
   width: 9rem;
   height: 9rem;
-  transition: 0.2s ease-in-out;
-  fill: #e0e0e0;
   cursor: pointer;
+  fill: #e0e0e0;
+  transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .social-icons svg:hover {
   fill: #ffffff;
+  transform: scale(1.1);
 }

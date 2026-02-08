@@ -1,0 +1,43 @@
+<div class="lista-container">
+    <div class="lista-box">
+
+        <h2>Lista de Jogos</h2>
+
+        <table class="tabela-custom">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Foto</th>
+                    <th>Preço</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let p of produtos">
+                    <td>{{ p.id }}</td>
+                    <td>{{ p.produto }}</td>
+                    <td>{{ p.descricao }}</td>
+
+                    <td>
+                        <img class="foto-produto" src="./assets/img/{{ p.foto }}" alt="produto">
+                    </td>
+
+                    <td>{{ p.preco | currency : 'BRL' }}</td>
+
+                    <td>
+                        <a class="btn btn-primary" routerLink="/restrict-menu/update/{{ p.id }}" role="button">Editar</a>
+                    </td>
+
+                    <td>
+                        <a class="btn btn-danger" (click)="excluir(p.id)" role="button">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,100 @@
+/* ================= Cadastro Section ================= */
+.cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-bottom: 5rem;
+}
+
+/* Box principal */
+.cadastro-box {
+    width: 100%;
+    max-width: 28.125rem;
+    padding: 2.5rem;
+    background: rgba(26, 26, 26, 0.9);
+    backdrop-filter: blur(0.625rem);
+    border-radius: 1.25rem;
+    box-shadow: 0 0.9375rem 1.5625rem rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.cadastro-box h2 {
+    margin-bottom: 1.875rem;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+
+.user-box {
+    position: relative;
+    margin-bottom: 1.875rem;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+}
+
+
+/* Label animado */
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 200;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.user-box input:focus~label,
+.user-box input:valid~label {
+    top: -20px;
+    font-size: 12px;
+    color: #e0e0e0;
+    font-weight: 300;
+}
+
+/* Botão */
+.btn-primary {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 1.25rem;
+    border: 0.0625rem solid #333;
+    background: transparent;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    border-color: #555;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .cadastro-box {
+        padding: 1.875rem 1.25rem;
+    }
+
+    .cadastro-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}

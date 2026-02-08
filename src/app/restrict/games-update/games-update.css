@@ -1,20 +1,18 @@
-/* ================= Login Section ================= */
-.login {
-
+/* ================ Update Section ================ */
+.update {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   box-sizing: border-box;
   margin-bottom: 5rem;
-  margin-top: 10rem;
 }
 
-/* Login Box */
-.login-box {
+/* Update Box */
+.update-box {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   padding: 40px;
   background: rgba(26, 26, 26, 0.9);
   backdrop-filter: blur(10px);
@@ -22,18 +20,17 @@
   border-radius: 20px;
   box-sizing: border-box;
   text-align: center;
-
 }
 
 /* Title */
-.login-box h2 {
+.update-box h2 {
   margin-bottom: 30px;
   color: #ffffff;
   font-weight: 400;
   font-size: 1.5rem;
 }
 
-/* User Box */
+/* Input Wrapper (mesmo padrão do login) */
 .user-box {
   position: relative;
   margin-bottom: 30px;
@@ -50,6 +47,13 @@
   outline: none;
 }
 
+
+
+.user-box.readonly input {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .user-box label {
   position: absolute;
   top: 0;
@@ -62,16 +66,16 @@
   transition: 0.5s ease;
 }
 
-.user-box input:focus~label,
-.user-box input:valid~label {
+/* Floating label animation */
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
   top: -20px;
   font-size: 12px;
   color: #e0e0e0;
   font-weight: 300;
 }
 
-
-/* Buttons */
+/* Button */
 .btn-primary {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
@@ -82,6 +86,7 @@
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 
 .btn-primary:hover {
@@ -89,37 +94,13 @@
   border-color: #555;
 }
 
-/* Signup link */
-.signup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-a.signup-link {
-  text-decoration: none;
-  color: #e0e0e0;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-a.signup-link:hover {
-  color: #fff;
-}
-
-/* ================= Responsividade ================= */
+/* Responsive */
 @media (max-width: 480px) {
-  .login-box {
+  .update-box {
     padding: 30px 20px;
   }
 
-  .login-box h2 {
+  .update-box h2 {
     font-size: 1.25rem;
-  }
-
-  .btn-primary {
-    width: 100%;
   }
 }

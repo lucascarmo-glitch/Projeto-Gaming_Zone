@@ -1,0 +1,74 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "produto": "Jogo 1",
+      "descricao": "Descrição do jogo 1",
+      "foto": "jogo1.PNG",
+      "preco": 200
+    },
+    {
+      "id": "2",
+      "produto": "Jogo 2",
+      "descricao": "Descrição do jogo 2",
+      "foto": "jogo2.PNG",
+      "preco": 250
+    },
+    {
+      "id": "3",
+      "produto": "Jogo 3",
+      "descricao": "Descrição do jogo 3",
+      "foto": "jogo3.PNG",
+      "preco": 300
+    },
+    {
+      "id": "4",
+      "produto": "Jogo 4",
+      "descricao": "Descrição do jogo 4",
+      "foto": "jogo4.PNG",
+      "preco": 350
+    },
+    {
+      "id": "5",
+      "produto": "Jogo 5",
+      "descricao": "Descrição do Jogo 5",
+      "foto": "Jogo5.PNG",
+      "preco": 400
+    },
+    {
+      "id": "6",
+      "produto": "Jogo 6",
+      "descricao": "Descrição do Jogo 6",
+      "foto": "Jogo6.PNG",
+      "preco": 350
+    },
+    {
+      "id": "7",
+      "produto": "Jogo 7",
+      "descricao": "Descrição do Jogo 7",
+      "foto": "Jogo7.PNG",
+      "preco": 500
+    },
+    {
+      "id": "8",
+      "produto": "Jogo 8",
+      "descricao": "Descrição do Jogo 8",
+      "foto": "Jogo8.PNG",
+      "preco": 150
+    },
+    {
+      "id": "9",
+      "produto": "Jogo 9",
+      "descricao": "Descrição do Jogo 9",
+      "foto": "Jogo9.PNG",
+      "preco": 450
+    },
+    {
+      "id": "10",
+      "produto": "Jogo 10",
+      "descricao": "Descrição do Jogo 10",
+      "foto": "Jogo10.PNG",
+      "preco": 275
+    }
+  ]
+}

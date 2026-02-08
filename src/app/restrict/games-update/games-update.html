@@ -1,0 +1,43 @@
+<main class="update">
+  <div class="update-box">
+
+    <h2>Atualizar Jogo</h2>
+
+    <form *ngIf="produto" (ngSubmit)="atualizar(produto.id)">
+
+      <!-- ID (somente leitura) -->
+      <div class="user-box readonly">
+        <input type="text" name="id" [(ngModel)]="produto.id" readonly required />
+        <label></label>
+      </div>
+
+      <!-- Nome -->
+      <div class="user-box">
+        <input type="text" name="produto" [(ngModel)]="produto.produto" required />
+        <label>Nome do Produto</label>
+      </div>
+
+      <!-- Descrição -->
+      <div class="user-box">
+        <input type="text" name="descricao" [(ngModel)]="produto.descricao" required />
+        <label>Descrição</label>
+      </div>
+
+      <!-- Foto -->
+      <div class="user-box">
+        <input type="text" name="foto" [(ngModel)]="produto.foto" />
+        <label>URL da Foto</label>
+      </div>
+
+      <!-- Preço -->
+      <div class="user-box">
+        <input type="number" name="preco" [(ngModel)]="produto.preco" required />
+        <label>Preço</label>
+      </div>
+
+      <!-- Botão -->
+      <button type="submit" class="btn-primary">Atualizar</button>
+
+    </form>
+  </div>
+</main>

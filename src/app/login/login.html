@@ -1,24 +1,32 @@
 <section class="login">
 
-    <div class="login-box">
-        <h2>Acesse sua conta ou cadastre-se</h2>
+  <div class="login-box">
+    <h2>Acesse sua conta ou cadastre-se</h2>
 
-        <form>
-            <div class="user-box">
-                <input type="text" name="" required="">
-                <label>email@exemplo.com</label>
-            </div>
-            <div class="user-box">
-                <input type="password" name="" required="">
-                <label>senha</label>
-            </div>
-        </form>
+    <!-- Formulário de login -->
+    <form>
+      <!-- Email -->
+      <div class="user-box">
+        <input type="email" name="email" id="email" [(ngModel)]="usuario" required>
+        <label for="email">Usuário</label>
+      </div>
 
-        <div class="signup">
-            <button type="submit" class="btn-primary">Login</button>
-            <a class="signup-link" href="#">Criar conta</a>
-        </div>
+      <!-- Senha -->
+      <div class="user-box">
+        <input type="password" name="password" id="password" [(ngModel)]="senha" required>
+        <label for="password">Senha</label>
+      </div>
 
+      <!-- Botão de login -->
+      <div class="form-actions">
+        <button (click)="fazerLogin()" type="submit" class="btn-primary">Login</button>
+      </div>
+    </form>
+
+    <!-- Link para cadastro -->
+    <div class="signup">
+      <p>Não possui uma conta? <a class="signup-link" href="#">Criar conta</a></p>
     </div>
+  </div>
 
 </section>

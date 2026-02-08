@@ -1,0 +1,35 @@
+<div class="cadastro">
+    <div class="cadastro-box">
+        <h2>Cadastrar Jogo</h2>
+
+        <form>
+            <!-- Nome -->
+            <div class="user-box">
+                <input type="text" name="produto" [(ngModel)]="produto.produto" required />
+                <label>Nome do Produto</label>
+            </div>
+
+            <!-- Descrição -->
+            <div class="user-box">
+                <input type="text" name="descricao" [(ngModel)]="produto.descricao" required />
+                <label>Descrição</label>
+            </div>
+
+            <!-- Foto -->
+            <div class="user-box">
+                <input type="text" name="foto" [(ngModel)]="produto.foto" required />
+                <label>URL da Foto</label>
+            </div>
+
+            <!-- Preço -->
+            <div class="user-box">
+                <input type="number" name="preco" [(ngModel)]="produto.preco" required />
+                <label>Preço</label>
+            </div>
+
+            <button type="button" class="btn-primary" (click)="cadastrar()">
+                Cadastrar
+            </button>
+        </form>
+    </div>
+</div>

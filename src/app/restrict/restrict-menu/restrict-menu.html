@@ -1,0 +1,25 @@
+<nav class="navbar">
+    <div class="spacer"></div>
+    <div class="nav-container">
+
+        <img src="./assets/img/logo.png" />
+
+        <div class="nav-center">
+            <ul class="nav-links" id="navLinks">
+                <li><a routerLink='list'>Listar Produtos</a></li>
+                <li><a routerLink='register'>Cadastrar Produto</a></li>
+            </ul>
+        </div>
+
+        <div class="auth-buttons">
+            <button class="icon-button" aria-label="logout">
+                <span (click)="logout()" class="material-icons">logout</span>
+            </button>
+        </div>
+
+    </div>
+</nav>
+
+<div class="margin-bottom"></div>
+
+<router-outlet></router-outlet>

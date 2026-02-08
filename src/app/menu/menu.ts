@@ -1,11 +1,11 @@
 import { Component, Renderer2 } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { AppRoutingModule } from "../app-routing.module";
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [MatToolbarModule, AppRoutingModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './menu.html',
   styleUrls: ['./menu.css'],
 })
