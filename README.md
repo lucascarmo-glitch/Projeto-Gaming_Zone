@@ -44,11 +44,11 @@ As operações foram validadas utilizando o Postman. Espaços reservados para in
 
 ### PUT - Editar Produtos
 
-![POST Teste](https://drive.google.com/export=view&id=1Emc-sFN5GC3zaMAlREW0NWtF7KGo6IPB)
+![POST Teste](https://drive.google.com/uc?export=view&id=1Emc-sFN5GC3zaMAlREW0NWtF7KGo6IPB)
 
 ### DELET - Deletar Produtos
 
-![DELETE Teste](https://drive.google.com/export=view&id=1HDe8QcnZy8QN15h33OfrlNJUQ5DOj34v)
+![DELETE Teste](https://drive.google.com/uc?export=view&id=1HDe8QcnZy8QN15h33OfrlNJUQ5DOj34v)
 
 ## Geração de código (scaffolding)
 
