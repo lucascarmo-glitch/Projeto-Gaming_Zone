@@ -36,19 +36,19 @@ As operações foram validadas utilizando o Postman. Espaços reservados para in
 
 ### GET - Listagem de Produtos
 
-![GET Teste](https://drive.google.com/file/d/1F-hPTvxQQmbh50nnAf70rt8Rmm1VAuAh/view?usp=sharing)
+![GET Teste](https://drive.google.com/uc?export=view&id=1F-hPTvxQQmbh50nnAf70rt8Rmm1VAuAh)
 
 ### POST - Cadastro de Produtos
 
-![POST Teste](https://drive.google.com/file/d/1dc5Vo-7H-N4Ex0quIvMYBX0p7nJovuNX/view?usp=sharing)
+![POST Teste](https://drive.google.com/uc?export=view&id=1dc5Vo-7H-N4Ex0quIvMYBX0p7nJovuNX)
 
 ### PUT - Editar Produtos
 
-![POST Teste](https://drive.google.com/file/d/1Emc-sFN5GC3zaMAlREW0NWtF7KGo6IPB/view?usp=sharing)
+![POST Teste](https://drive.google.com/export=view&id=1Emc-sFN5GC3zaMAlREW0NWtF7KGo6IPB)
 
 ### DELET - Deletar Produtos
 
-![DELETE Teste](https://drive.google.com/file/d/1HDe8QcnZy8QN15h33OfrlNJUQ5DOj34v/view?usp=sharing)
+![DELETE Teste](https://drive.google.com/export=view&id=1HDe8QcnZy8QN15h33OfrlNJUQ5DOj34v)
 
 ## Geração de código (scaffolding)
 
