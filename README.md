@@ -1,11 +1,50 @@
 # Projeto Gaming Zone - Angular
 
-Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.9.
+O projeto Gaming Zone consiste no desenvolvimento de uma aplicação web para gerenciamento de produtos de uma loja de jogos. A primeira fase contempla a implementação do front-end utilizando Angular, juntamente com a integração a um servidor JSON para simulação das operações de CRUD (Create, Read, Update, Delete).
 
-## Servidor de desenvolvimento
+## Escopo do Projeto
+
+- Nesta etapa inicial foram desenvolvidos:
+1. Interface front-end com Angular, HTML, CSS e TypeScript.
+2. Integração com json-server para persistência temporária dos dados.
+3. Funcionalidades de:
+-- Cadastro de produtos
+-- Edição de produtos
+-- Listagem de produtos
+-- Exclusão de produtos
+-Testes de API realizados via Postman, com êxito nas operações GET, POST, PUT e DELETE.
+
+As próximas fases incluem o desenvolvimento do back-end e aprimoramentos contínuos de segurança segundo práticas de CyberDevOps.
+
+## Tecnologia Usada
+
+- [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.9.
+- HTML5, CSS3, TypeScript
+- json-server
+- Postman
+
+## Execução do projeto
+### Servidor de desenvolvimento
 
 Execute `ng serve` para iniciar um servidor de desenvolvimento.  
 Acesse `http://localhost:4200/`. A aplicação será recarregada automaticamente sempre que houver alterações nos arquivos de código-fonte.
+
+### Servidor JSON
+
+Execute `json-server dbgames.json` para iniciar o servidor JSON.
+Acesse `http://localhost:3000/`.
+
+## Teste de APIP - Postman
+
+As operações foram validadas utilizando o Postman. Espaços reservados para inclusão das evidências:
+
+### GET - Listagem de Produtos
+
+### POST - Cadastro de Produtos
+
+### PUT - Editar Produtos
+
+### DELET - Deletar Produtos
 
 ## Geração de código (scaffolding)
 
