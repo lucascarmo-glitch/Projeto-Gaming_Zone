@@ -8,7 +8,7 @@ Nesta etapa inicial foram desenvolvidos:
 - Interface front-end com Angular, HTML, CSS e TypeScript.
 - Integração com json-server para persistência temporária dos dados.
 - Funcionalidades de: cadastro, edição, listagem e exclusão de produtos.
--Testes de API realizados via Postman, com êxito nas operações GET, POST, PUT e DELETE.
+- Testes de API realizados via Postman, com êxito nas operações GET, POST, PUT e DELETE.
 
 As próximas fases incluem o desenvolvimento do back-end e aprimoramentos contínuos de segurança segundo práticas de CyberDevOps.
 
